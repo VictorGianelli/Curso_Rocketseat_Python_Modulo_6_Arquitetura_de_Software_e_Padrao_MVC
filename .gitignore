@@ -1,5 +1,5 @@
 venv
 .git.old
-storage
+storage_pet_shop
 **/__pycache__
 .pytest_cache
