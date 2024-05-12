@@ -1,2 +1,5 @@
 venv
 .git.old
+storage
+**/__pycache__
+.pytest_cache
