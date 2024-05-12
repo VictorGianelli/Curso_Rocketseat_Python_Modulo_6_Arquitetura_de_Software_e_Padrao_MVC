@@ -1,4 +1,6 @@
 from src.models.sqlite.entities.people import PeopleTable
+from src.models.sqlite.entities.pets import PetsTable
+from sqlalchemy.orm.exc import NoResultFound  
 
 
 class PeopleRepository:
@@ -25,3 +27,22 @@ class PeopleRepository:
             except Exception as exception:
                 database.session.rollback()
                 raise exception
+    def get_person(self, person_id: int) -> PeopleTable:
+        with self.__db_connection as database:
+            try:
+                person = (
+                    database.session
+                    .query(PeopleTable)
+                    .outerjoin(PetsTable, PetsTable.id == PeopleTable.pet_id)
+                    .filter(PeopleTable.id == person_id)
+                    .with_entities(
+                        PeopleTable.first_name,
+                        PeopleTable.last_name,
+                        PetsTable.name.label("pet_name"),
+                        PetsTable.type.label("pet_type")
+                    )
+                    .one()
+                )
+                return person
+            except NoResultFound:
+                return None
