@@ -1,0 +1,89 @@
+{
+	"info": {
+		"_postman_id": "a33ed510-89e3-4ea3-9d59-b92208d096ed",
+		"name": "API - Curso Rockeatseat Python NÍVEL 5 - Arquitetura de Software e Padrão MVC",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "32695347"
+	},
+	"item": [
+		{
+			"name": "/pets",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:3000/pets"
+			},
+			"response": []
+		},
+		{
+			"name": "/pets/:name",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/pets/:name",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"pets",
+						":name"
+					],
+					"variable": [
+						{
+							"key": "name",
+							"value": "cobra"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/people/:person_id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/people/:person_id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"people",
+						":person_id"
+					],
+					"variable": [
+						{
+							"key": "person_id",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/people",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"first_name\": \"Joao\",\r\n    \"last_name\": \"Silva\",\r\n    \"age\": 40,\r\n    \"pet_id\": 7\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/people"
+			},
+			"response": []
+		}
+	]
+}
