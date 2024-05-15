@@ -1,4 +1,4 @@
-# Curso Rockeatseat Python NÍVEL 5
+# Curso Rocketseat Python NÍVEL 5
 ## Arquitetura de Software e Padrão MVC
 - Nesse nivel foi introduzido os conceitos sobre Arquitetura de Software e entendido como planejar e montar um software de maneira profissional. Percorri desde as configurações iniciais de projeto, até o bom manuseio de ORMs para bancos de dados e levantamento de API contendo validação de erros. O projeto foi finalizado entendendo toda a separação de diretórios, desenvolvimento de features sustentáveis e aplicação de testes unitários.
 - Utilize o comando abaixo para ínstalar as bibliotecas necessárias
